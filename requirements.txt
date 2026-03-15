@@ -1,0 +1,20 @@
+# WhatsApp AI Auto-Reply Bot — Dependencies
+# Install with:  pip install -r requirements.txt
+
+# ── Core AI / NLP ─────────────────────────────────────────────────────────────
+transformers>=4.40.0        # HuggingFace Transformers (BERT, FLAN-T5, etc.)
+torch>=2.2.0                # PyTorch backend (CPU-only is fine)
+sentencepiece>=0.1.99       # Required by FLAN-T5 tokenizer
+accelerate>=0.27.0          # Faster model loading
+
+# ── WhatsApp Selenium Approach ────────────────────────────────────────────────
+selenium>=4.20.0            # Browser automation
+webdriver-manager>=4.0.1   # Auto-manages ChromeDriver versions
+
+# ── WhatsApp Twilio Approach (production) ────────────────────────────────────
+flask>=3.0.0                # Web server for webhook
+twilio>=9.0.0               # Twilio Python SDK
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+python-dotenv>=1.0.0        # Load .env config
+requests>=2.31.0
